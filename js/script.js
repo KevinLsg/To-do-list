@@ -136,3 +136,12 @@ delBtnAll.addEventListener("click", function () {
   });
   notice.textContent = "Enter a note again";
 });
+
+// Sidenav
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

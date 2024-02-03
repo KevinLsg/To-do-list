@@ -9,6 +9,55 @@ body {
   padding: 20px;
   background-color: #465493;
 }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(31, 78, 66, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav .navItem {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ccc0c0;
+  display: block;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.navItem {
+  width: 100%;
+  background-color: rgb(16, 56, 46);
+}
+
+.sidenav .navItem:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav .navItem {
+    font-size: 18px;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-around;

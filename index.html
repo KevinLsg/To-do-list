@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--
-   index.html
-   
-   Copyright 2024 Usuário <usuario@Usuario>
-   
-   This program is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; either version 2 of the License, or
-   (at your option) any later version.
-   
-   This program is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-   
-   You should have received a copy of the GNU General Public License
-   along with this program; if not, write to the Free Software
-   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-   MA 02110-1301, USA.
-   
-   
--->
-
   <head>
     <meta charset="utf-8" />
     <title>To do List</title>
     <meta name="generator" content="Geany 1.38" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+      >&times;</a
+    >
+    <button class="navItem" onclick="sortPriority()">Sort in priority</button>
+    <button class="navItem" onclick="sortAlphabetical()">
+      Sort in alphabetical order
+    </button>
+    <button class="navItem" onclick="sortReverseAlphabetical()">
+      Sort in reverse alphabetical order
+    </button>
+    <button class="navItem">Contact</button>
+  </div>
+
+  <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+    >&#9776;</span
+  >
 
   <body id="body">
     <nav id="menu">
@@ -41,6 +35,6 @@
       <div class="container" id="container"></div>
     </section>
 
-    <script src="index.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
