@@ -4,27 +4,34 @@
     <meta charset="utf-8" />
     <title>To do List</title>
     <meta name="generator" content="Geany 1.38" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-      >&times;</a
-    >
-    <button class="navItem" onclick="sortPriority()">Sort in priority</button>
-    <button class="navItem" onclick="sortAlphabetical()">
-      Sort in alphabetical order
-    </button>
-    <button class="navItem" onclick="sortReverseAlphabetical()">
-      Sort in reverse alphabetical order
-    </button>
-    <button class="navItem">Contact</button>
-  </div>
-
-  <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
-    >&#9776;</span
-  >
 
   <body id="body">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <button class="navItem" onclick="sortPriority()">Sort in priority</button>
+      <button class="navItem" onclick="sortAlphabetical()">
+        Sort in alphabetical order
+      </button>
+      <button class="navItem" onclick="sortReverseAlphabetical()">
+        Sort in reverse alphabetical order
+      </button>
+      <button class="navItem">Contact</button>
+    </div>
+
+    <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+      >&#9776;</span
+    >
+
     <nav id="menu">
       <h1 id="title">TO DO LIST</h1>
       <button class="addbutton" id="add-btn">Add</button>

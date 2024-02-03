@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "sans-serif";
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   padding: 20px;
   background-color: #465493;
@@ -39,6 +39,7 @@ body {
 
 .sidenav .navItem:hover {
   color: #f1f1f1;
+  cursor: pointer;
 }
 
 .sidenav .closebtn {
@@ -47,15 +48,6 @@ body {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav .navItem {
-    font-size: 18px;
-  }
 }
 
 nav {
@@ -72,7 +64,7 @@ h1 {
 }
 
 .box h2 {
-  color: red;
+  font-weight: bold;
 }
 .addbutton,
 .savebutton,
@@ -126,4 +118,13 @@ h1 {
 }
 p {
   font-size: 1.5rem;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav .navItem {
+    font-size: 18px;
+  }
 }

@@ -8,7 +8,7 @@ The purpose of the project is to create a to-do list capable of adding, editing 
 - Edit existing tasks.
 - Delete tasks from the list.
 
-## Next Steps:
+## Next Steps
 
 Priorities: Allow users to assign priorities to tasks to indicate importance.
 
