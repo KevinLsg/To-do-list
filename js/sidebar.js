@@ -8,6 +8,12 @@ function closeNav() {
 }
 
 function sortAlphabetical() {
+  if (
+    container.childElementCount === 0 ||
+    !notice === "Enter a note to get started"
+  ) {
+    alert("Nada");
+  }
   tasks.sort(function (a, b) {
     if (a.title < b.title) {
       return -1;
@@ -17,7 +23,7 @@ function sortAlphabetical() {
       return 0;
     }
   });
-  console.log(tasks);
+  render(tasks);
 }
 
 function sortReverseAlphabetical() {
@@ -30,5 +36,17 @@ function sortReverseAlphabetical() {
       return 0;
     }
   });
-  console.log(tasks);
+  render(tasks);
+}
+
+function sortPriority() {
+  tasks.sort(function (a, b) {
+    if (a.color === "red") {
+      return -1;
+    } else if (b.color === "yellow") {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
 }
