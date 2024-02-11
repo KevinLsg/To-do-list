@@ -10,6 +10,9 @@ console.log(tasks);
 const lendsFromLocalStorage = JSON.parse(localStorage.getItem("tasks"));
 let notice = document.createElement("h2");
 
+let colorIndex = 0;
+let colors = ["green", "yellow", "red"];
+
 console.log(lendsFromLocalStorage);
 
 function render(lista) {
@@ -21,6 +24,7 @@ function render(lista) {
       <button class="edit alt-btn">Edit</button>
       <button class="remove del-btn">Delete</button>
       <p> ${lista[i].content} </p>
+      <button class="priority" style="background-color:${lista[i].color}"></button>
     </div>
     `;
   }
@@ -68,7 +72,13 @@ addBtn.addEventListener("click", function () {
     contentDiv.className = "text";
     contentDiv.textContent = content;
 
-    tasks.push({ title: title, content: content });
+    let priority = document.createElement("button");
+    priority.className = "priority";
+    priority.style.backgroundColor = colors[colorIndex];
+    console.log(priority);
+    priority.addEventListener("click", () => changePriority(priority));
+
+    tasks.push({ title: title, content: content, color: colors[0] });
 
     console.log(tasks);
 
@@ -78,6 +88,7 @@ addBtn.addEventListener("click", function () {
     newDiv.appendChild(editBtn);
     newDiv.appendChild(dellBtn);
     newDiv.appendChild(contentDiv);
+    newDiv.appendChild(priority);
     notice.textContent = "";
   }
 });
@@ -137,11 +148,8 @@ delBtnAll.addEventListener("click", function () {
   notice.textContent = "Enter a note again";
 });
 
-// Sidenav
-function openNav() {
-  document.getElementById("mySidenav").style.width = "300px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+function changePriority(button) {
+  button.style.backgroundColor = colors[colorIndex];
+  tasks.push({ color: colors[colorIndex] });
+  colorIndex = (colorIndex + 1) % colors.length;
 }

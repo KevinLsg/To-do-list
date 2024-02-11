@@ -40,10 +40,10 @@ function sortReverseAlphabetical() {
 }
 
 function sortPriority() {
-  tasks.sort(function (a, b) {
+  tasks.sort(function (a) {
     if (a.color === "red") {
       return -1;
-    } else if (b.color === "yellow") {
+    } else if (a.color === "yellow") {
       return 1;
     } else {
       return 0;

@@ -63,9 +63,6 @@ h1 {
   justify-content: center;
 }
 
-.box h2 {
-  font-weight: bold;
-}
 .addbutton,
 .savebutton,
 .deletebutton {
@@ -104,19 +101,39 @@ h1 {
   position: relative;
   gap: 10px;
 }
+
+.box h2 {
+  font-weight: bold;
+  max-width: 440px;
+  margin: 0;
+  text-align: left;
+  align-self: flex-start;
+}
 .edit,
-.remove {
+.remove,
+.priority {
   position: absolute;
   right: 0;
   width: 60px;
   height: 35px;
   border-radius: 5px;
 }
-
+/*red - high priority
+  yellow - medium priority
+  green - low prioriy*/
+.priority {
+  background-color: green;
+  right: 0;
+  border-radius: 0px;
+}
+.edit {
+  top: 40px;
+}
 .remove {
-  top: 45px;
+  top: 80px;
 }
 p {
+  margin-top: 30px;
   font-size: 1.5rem;
 }
 
