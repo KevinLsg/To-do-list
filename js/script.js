@@ -15,16 +15,16 @@ let colors = ["green", "yellow", "red"];
 
 console.log(lendsFromLocalStorage);
 
-function render(lista) {
+function render(tasks) {
   list = "";
-  for (let i = 0; i < lista.length; i++) {
+  for (let i = 0; i < tasks.length; i++) {
     list += `
     <div class="box">
-      <h2> ${lista[i].title} </h2>
+      <h2> ${tasks[i].title} </h2>
       <button class="edit alt-btn">Edit</button>
       <button class="remove del-btn">Delete</button>
-      <p> ${lista[i].content} </p>
-      <button class="priority" style="background-color:${lista[i].color}"></button>
+      <p> ${tasks[i].content} </p>
+      <button class="priority" style="background-color:${tasks[i].color}"></button>
     </div>
     `;
   }
