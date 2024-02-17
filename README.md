@@ -18,6 +18,4 @@ Currently you can only write one text, I want to let the user add several lists 
 
 ## Known Bugs
 
-Titles and texts do not break lines, making the content leave the task.
-
 If you create a note and then edit it and leave everything blank, the text will disappear
